@@ -1,0 +1,15 @@
+services:
+  expo-dev:
+    build: .
+    ports:
+      - "19000:19000"
+      - "19001:19001"
+      - "19002:19002"
+      - "19006:19006"
+    volumes:
+      - .:/root/workspace
+      # https://code.visualstudio.com/docs/remote/containers-advanced#_avoiding-extension-reinstalls-on-container-rebuild
+      - vs-server:/root/.vscode-server
+volumes:
+  vs-server: {}
+  code: {}
